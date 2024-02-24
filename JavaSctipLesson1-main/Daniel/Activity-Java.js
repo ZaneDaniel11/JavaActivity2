@@ -1,4 +1,4 @@
-const listOFJSON = [
+const list = [
     {
         Name : "Item 1",
         Category: "Category 1",
@@ -212,20 +212,20 @@ const listOFJSON = [
     
 ];
 
-for (var i = 0; i < listOFJSON.length; i++) {  
+for (var i = 0; i < list.length; i++) {  
 
-    var parentRow = document.querySelector("table.table");
+    var parentRow = document.querySelector(".table");
     var cardTemplate = document.querySelector("#cardTemplate");
     var cloned = cardTemplate.content.cloneNode(true);
 
-    cloned.querySelector("tbody tr.data td.Name").innerHTML = listOFJSON[i].Name;
-    cloned.querySelector("tbody tr.data td.Category").innerHTML = listOFJSON[i].Category;
-    cloned.querySelector("tbody tr.data td.Price").innerHTML = listOFJSON[i].Price;
-    cloned.querySelector("tbody tr.data td.Quantity").innerHTML = listOFJSON[i].Quantity;
-    cloned.querySelector("tbody tr.data td.Payment_Status").innerHTML = listOFJSON[i].Payment_Status;
+    cloned.querySelector("tbody tr.data td.Name").innerHTML = list[i].Name;
+    cloned.querySelector("tbody tr.data td.Category").innerHTML = list[i].Category;
+    cloned.querySelector("tbody tr.data td.Price").innerHTML = list[i].Price;
+    cloned.querySelector("tbody tr.data td.Quantity").innerHTML = list[i].Quantity;
+    cloned.querySelector("tbody tr.data td.Payment_Status").innerHTML = list[i].Payment_Status;
 
     
-    if (listOFJSON[i].Payment_Status === "Not Paid") {
+    if (list[i].Payment_Status === "Not Paid") {
         cloned.querySelector("tbody tr.data td.Payment_Status").style.backgroundColor = "red";
     }
 
